@@ -6,5 +6,8 @@ public class EnumDemo {
 
         System.out.println(season);
         System.out.println(season.next());
+
+        Season nextSeason = season.next();
+        assert nextSeason == Season.WINTER;
     }
 }
