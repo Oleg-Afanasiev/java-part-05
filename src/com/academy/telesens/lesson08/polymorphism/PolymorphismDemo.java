@@ -1,9 +1,9 @@
-package com.academy.telesens.lesson08;
+package com.academy.telesens.lesson08.polymorphism;
 
-import com.academy.telesens.lesson08.components.Button;
-import com.academy.telesens.lesson08.components.CheckBox;
-import com.academy.telesens.lesson08.components.Component;
-import com.academy.telesens.lesson08.components.Label;
+import com.academy.telesens.lesson08.polymorphism.components.Button;
+import com.academy.telesens.lesson08.polymorphism.components.CheckBox;
+import com.academy.telesens.lesson08.polymorphism.components.Component;
+import com.academy.telesens.lesson08.polymorphism.components.Label;
 
 public class PolymorphismDemo {
     public static void main(String[] args) {
@@ -14,7 +14,10 @@ public class PolymorphismDemo {
         component2.draw();
         component2 = new CheckBox();
         component2.draw();
-        ((CheckBox)component2).check();
+        if (component2 instanceof  CheckBox)
+            ((CheckBox)component2).check();
+        else if (component2 instanceof  Button)
+            ((Button)component2).click();
 
         Component[] components = {
                 new Component(),

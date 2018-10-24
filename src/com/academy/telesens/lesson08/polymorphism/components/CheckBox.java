@@ -1,4 +1,4 @@
-package com.academy.telesens.lesson08.components;
+package com.academy.telesens.lesson08.polymorphism.components;
 
 public class CheckBox extends Component {
     @Override
