@@ -4,16 +4,22 @@ import com.academy.telesens.automationpractice.model.EntityDress;
 
 public class CompareDresses {
     public static void main(String[] args) {
-        String[] expected = {"demo_1", "demo_3", "demo_4", "demo_5"};
-        String[] actual = {"demo_3", "demo_4", "demo_1", "demo_5"};
+        String[] expectedModels = {"demo_1", "demo_3", "demo_4", "demo_5"};
+        String[] actualModels = {"demo_3", "demo_4", "demo_1", "demo_5"};
 
         EntityDress[] expectedDresses = getExpectedDresses();
         EntityDress[] actualDresses = getActualDresses();
-        boolean assertByCode = compare(expected, actual);
+        boolean assertByModel = compare(expectedModels, actualModels);
         boolean assertByDress = compare(expectedDresses, actualDresses);
 
-        System.out.println(assertByCode);
-        System.out.println(assertByDress);
+        // Input Detail Report
+        System.out.println("Expected models: ");
+        System.out.println("Actual models: ");
+        System.out.println("Comparing: " + assertByModel);
+
+        System.out.println("Expected dresses: ");
+        System.out.println("Actual dresses: ");
+        System.out.println("Comparing: " + assertByDress);
     }
 
     // TODO
