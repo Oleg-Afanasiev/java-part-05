@@ -50,6 +50,31 @@ public class EntityDress {
         this.price = price;
     }
 
+    public EntityDress withModel(String model) {
+        this.model = model;
+        return this;
+    }
+
+    public EntityDress withName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public EntityDress withSize(String size) {
+        this.size = size;
+        return this;
+    }
+
+    public EntityDress withColor(String color) {
+        this.color = color;
+        return this;
+    }
+
+    public EntityDress withPrice(double price) {
+        this.price = price;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "Позиция{" +
