@@ -103,7 +103,14 @@ public class EntityDress implements Comparable<EntityDress> {
         return Objects.hash(model, name, size, color, price);
     }
 
-    // Учим сортировать
+    /**
+     * Сравнивает этот объект 'this' со переданным 'other'.
+     * Возвращает:
+     *  0 - если объекты равны
+     *  -1 - если 'this' меньше 'other'
+     *  1 - если 'this' больше 'other'
+     * Данный метод вызывается алгоритмом сортировки для упорядочивания
+     */
     @Override
     public int compareTo(EntityDress other) {
         return Double.compare(other.price, this.price);

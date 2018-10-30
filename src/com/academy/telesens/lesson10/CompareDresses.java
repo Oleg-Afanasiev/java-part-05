@@ -24,7 +24,6 @@ public class CompareDresses {
         System.out.println("Comparing: " + assertByDress);
     }
 
-    // TODO
     private static boolean compare(String[] expected, String[] actual) {
         // Сортируются и оригинальные массивы, так как передаются по ссылке
         Arrays.sort(expected);
@@ -32,8 +31,9 @@ public class CompareDresses {
         return Arrays.equals(expected, actual);
     }
 
-    // TODO
     private static boolean compare(EntityDress[] expected, EntityDress[] actual) {
+        // Для того, чтобы сортировка отработала, необходимо реализовать
+        // интерфейс 'Comparable' для элементов 'EntityDress'
         Arrays.sort(expected);
         Arrays.sort(actual);
         return Arrays.equals(expected, actual);
