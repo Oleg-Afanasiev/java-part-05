@@ -2,6 +2,8 @@ package com.academy.telesens.lesson10;
 
 import com.academy.telesens.automationpractice.model.EntityDress;
 
+import java.util.Arrays;
+
 public class CompareDresses {
     public static void main(String[] args) {
         String[] expectedModels = {"demo_1", "demo_3", "demo_4", "demo_5"};
@@ -24,12 +26,17 @@ public class CompareDresses {
 
     // TODO
     private static boolean compare(String[] expected, String[] actual) {
-        return false;
+        // Сортируются и оригинальные массивы, так как передаются по ссылке
+        Arrays.sort(expected);
+        Arrays.sort(actual);
+        return Arrays.equals(expected, actual);
     }
 
     // TODO
     private static boolean compare(EntityDress[] expected, EntityDress[] actual) {
-        return false;
+        Arrays.sort(expected);
+        Arrays.sort(actual);
+        return Arrays.equals(expected, actual);
     }
 
     private static EntityDress[] getExpectedDresses() {
