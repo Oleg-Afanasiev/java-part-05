@@ -1,5 +1,7 @@
 package com.academy.telesens.automationpractice;
 
+import com.academy.telesens.automationpractice.annotation.Log;
+import com.academy.telesens.automationpractice.annotation.TestRun;
 import com.academy.telesens.automationpractice.model.EntityDress;
 
 public class CartTests {
@@ -10,6 +12,11 @@ public class CartTests {
     public void init(String browser, String baseUrl) {
         this.browser = browser;
         this.baseUrl = baseUrl;
+    }
+
+    @TestRun
+    public void testUnderAnnotation() {
+        System.out.println("testUnderAnnotation");
     }
 
     public void testAddDressToCart(EntityDress addedDress, int amount) {
@@ -68,5 +75,11 @@ public class CartTests {
         System.out.println(String.format("Open browser '%s'", browser));
         System.out.println(String.format("Go to '%s'", baseUrl));
         System.out.println("Go to 'Dresses' category");
+    }
+
+    @Log
+    @TestRun
+    private void testUnderAnnotation2() {
+//        System.out.println("testUnderAnnotation2");
     }
 }

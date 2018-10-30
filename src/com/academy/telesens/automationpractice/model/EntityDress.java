@@ -2,7 +2,7 @@ package com.academy.telesens.automationpractice.model;
 
 import java.util.Objects;
 
-public class EntityDress {
+public class EntityDress implements Comparable<EntityDress> {
     private String model;
     private String name;
     private String size;
@@ -101,5 +101,11 @@ public class EntityDress {
     @Override
     public int hashCode() {
         return Objects.hash(model, name, size, color, price);
+    }
+
+    // Учим сортировать
+    @Override
+    public int compareTo(EntityDress other) {
+        return Double.compare(other.price, this.price);
     }
 }
